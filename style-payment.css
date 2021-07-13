@@ -1,0 +1,106 @@
+.pie-wrap:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      visibility: hidden;
+      transition: .3s;
+  }
+  .pie-wrap.inactive:after {
+      visibility: visible;
+      background: rgba(255, 255, 255, 0.95);
+  }
+  .payment-pull-out {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+  }
+  .payment-info-block:hover .payment-pull-out {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .payment-pull-out:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: -55px;
+      bottom: 55px;
+      width: 50px;
+      height: 5px;
+      background: #202a44;
+  }
+  .payment-pull-out.total-principal:after,
+  .payment-pull-out.total-interest:after {
+      bottom: auto;
+      top: 55px;
+  }
+  .payment-pull-out.down-payment:after {
+      background: #a9d7c9;
+  }
+  .payment-pull-out.trade-in-value:after {
+      background: #3a6065;
+  }
+  .payment-pull-out.total-interest:after {
+    background: #78b833;
+  }
+  .table-body {
+    overflow-x: hidden;
+  }
+  /* width */
+  .table-body::-webkit-scrollbar {
+    width: 23px;
+  }
+  /* Track */
+  .table-body::-webkit-scrollbar-track {
+    background: #f0f0f0; 
+  }
+  /* Handle */
+  .table-body::-webkit-scrollbar-thumb {
+    background: #202a44; 
+  }
+  #pie svg text {
+    opacity: 0;
+    transition: .3s;
+  }
+  #pie:hover svg text {
+    opacity: 1;
+  }
+  .slider-wrap {
+    width: 100%; /* Width of the outside container */
+  }
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.375rem;
+    background: #e8e8e8;
+    outline: none;
+  }
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 1rem;
+      height: 1.5rem;
+      background: #28325b;
+      border: 3px solid white;
+      cursor: pointer;
+  }
+  .slider::-moz-range-thumb {
+      width: 1rem;
+      height: 1.5rem;
+      background: #28325b;
+      border: 3px solid white;
+      cursor: pointer;
+  }
+
+  .slider-amt input {
+    display: none;
+  }
